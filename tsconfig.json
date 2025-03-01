@@ -1,0 +1,48 @@
+/* 
+IMPORTANT:
+This tsconfig does not affect typescript compilation at all.
+It is a near-identical clone of the server's tsconfig (src/server/tsconfig.json),
+and exists only to provide VSCode completion & hints on the shared src directory.
+*/
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "checkJs": true,
+    "sourceMap": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "jest"],
+    "jsx": "preserve",
+    "baseUrl": "./src",
+    "outDir": "dist",
+    "paths": {
+      "~/*": ["./*"]
+    }
+  },
+  "include": ["src", "infrastructure/typescript", "src"],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/.backup",
+    "**/.private",
+    "**/.git"
+  ]
+}

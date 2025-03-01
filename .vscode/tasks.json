@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "fnm use --install-if-missing || : && node --run dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "Run development server",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
